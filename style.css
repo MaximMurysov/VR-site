@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #18181b;
+  min-height: 100vh;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0; /* Обнуление внешних отступов */
+  padding: 0; /* Обнуление внутренних отступов */
+  box-sizing: border-box; /* Учет padding и border в ширине элемента */
+  color: White;
+}
+
+.header-container {
+  height: 114px;
+  width: 1980px;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 1650px;
+  margin-left: 120px;
+  margin-right: 120px;
+  align-items: center;
+  margin-top: 31px;
+  position: relative;
+}
+.header-nav {
+  width: 600px;
+}
+
+.header-menu {
+  padding-left: 64px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.header-btn {
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  font-weight: 100;
+  border-radius: none;
+  cursor: pointer;
+  color: #ffff;
+  background: linear-gradient(#18181b),
+    linear-gradient(to right, #ff00cc, #3333ff);
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  color: whitesmoke;
+}
+.header-bg {
+  background-image: url(images/header-bg.png);
+  position: absolute;
+  top: -31px; /* Ваше значение */
+  left: 64%; /* Центрирование (можно настроить под ваш макет) */
+  transform: rotate(0deg); /* Центрирование + поворот */
+  height: 663px; /* Ваше значение */
+  width: 1000px; /* Ваше значение */
+  z-index: -1; /* Чтобы изображение было ПОД текстом */
+  opacity: 20%; /* По желанию: прозрачность */
+  background-repeat: no-repeat;
+}
+
+.hidden-text {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(to right, blue, pink);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.hidden-text.active {
+  max-height: 200px;
+  opacity: 1;
+}
