@@ -17,6 +17,11 @@ body {
   color: White;
 }
 
+.container {
+  margin-left: 352px;
+  margin-right: 352px;
+}
+
 .header-container {
   height: 114px;
   width: 1980px;
@@ -27,14 +32,13 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1650px;
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 352px;
+  margin-right: 352px;
   align-items: center;
   margin-top: 31px;
-  position: relative;
 }
 .header-nav {
-  width: 600px;
+  width: 602px;
 }
 
 .header-menu {
@@ -42,24 +46,34 @@ body {
   text-decoration: none;
   font-size: 16px;
   line-height: 28px;
+  position: relative;
+  display: inline-block;
+}
+#idpage {
+  margin-right: 0;
+  position: relative;
 }
 
 .header-btn {
-  padding: 15px;
-  align-items: center;
-  display: flex;
+  padding: 10px 20px;
   font-size: 15px;
-  font-weight: 100;
-  border-radius: none;
-  cursor: pointer;
-  color: #ffff;
-  background: linear-gradient(#18181b),
+  color: white;
+  background: linear-gradient(#18181b, #18181b),
     linear-gradient(to right, #ff00cc, #3333ff);
   background-clip: padding-box, border-box;
   border: 2px solid transparent;
-  padding: 10px 20px;
-  color: whitesmoke;
+  transition: all 0.3s ease; /* Добавляем плавный переход */
+  cursor: pointer;
+  margin-right: 352px;
 }
+.header-btn:hover {
+  color: linear-gradient(to right, #ff00aa, #3366ff);
+  background: linear-gradient(#18181b, #18181b),
+    linear-gradient(to right, #ff00aa, #3366ff);
+  box-shadow: 0 0 10px rgba(51, 102, 255, 0.5);
+  transform: translateY(-2px);
+}
+
 .header-bg {
   background-image: url(images/header-bg.png);
   position: absolute;
@@ -74,18 +88,115 @@ body {
 }
 
 .hidden-text {
-  max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s ease, opacity 0.3s ease;
   opacity: 0;
   z-index: -1;
   position: absolute;
   background: linear-gradient(to right, blue, pink);
-  border-radius: 10px;
-  padding: 3px;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  height: 20px;
+  width: 150px;
+  text-align: center;
 }
 
 .hidden-text.active {
   max-height: 200px;
   opacity: 1;
+  z-index: 10;
+}
+
+
+
+/* Блок hero */
+.hero__container{
+  display: flex;
+}
+.hero__column{
+  width: 740px;
+  margin-top: 87px;
+  height: 316px;
+ 
+}
+.hero__head{
+margin-bottom: 32px;
+
+
+}
+
+.hero__tittle{
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 100%;
+  height: 166px;
+  width: 540px;
+  margin-bottom: 12px;
+}
+
+.par__tittle{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  width: 446px;
+  height: 53px;
+  color: #D1D1D1;
+  
+}
+.hero__btn{
+  padding: 18px 38px;
+  width: 206px;
+  height: 50px;
+  background: linear-gradient(to left,#0CBAF1, #E95CE9);
+font-weight: 600;
+font-size: 14px;
+text-transform: uppercase;
+border: none;
+  cursor: pointer;
+  margin-bottom: 42px;
+
+}
+
+.hero__people{
+  display: flex;
+  margin-top: 51px;
+}
+.faces{
+  position: relative;
+
+}
+
+
+#people1{
+  position: absolute;
+  left: 35px;
+}
+#people3{
+  position: absolute;
+  left: 70px;
+}
+
+.people__text{
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.people_numbers{
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+ margin-right: 15px;
+}
+
+.img-num{
+  position: absolute;
+ margin-top: 15px;
+}
+.happy_clients{
+  font-weight: 500;
+  color: #D1D1D1;
+  line-height: 28px;
+  font-size: 16px;
 }
