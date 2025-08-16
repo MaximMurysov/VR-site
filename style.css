@@ -97,8 +97,8 @@ body {
   border-radius: 5px;
   top: 100%;
   left: 0;
-  height: 20px;
-  width: 150px;
+  height: 25px;
+  width: 200px;
   text-align: center;
 }
 
@@ -106,6 +106,8 @@ body {
   max-height: 200px;
   opacity: 1;
   z-index: 10;
+  text-align: center;
+ 
 }
 
 
@@ -155,16 +157,51 @@ text-transform: uppercase;
 border: none;
   cursor: pointer;
   margin-bottom: 42px;
+  transition: transform  0.5s ease ;
+  position: relative;
 
 }
+.hero__btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(86, 0, 224, 0.7)
+}
+.hidden_hero_btn{
+ overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(to right, blue, pink);
+  border-radius: 2px;
+  bottom: 100%;
+  left: 0;
+  height: 20px;
+  width: 200px;
+  text-align: center;
+ 
+}
+.hidden_hero_btn.active {
+  opacity: 1;
+  z-index: 10;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-align: center;
+text-transform: none;
+  margin-left: 30px;
+   min-width: 150px;
+    max-width: 300px;
+    width: max-content
+}
+
+
 
 .hero__people{
   display: flex;
-  margin-top: 51px;
+  align-items: center;
 }
 .faces{
   position: relative;
-
 }
 
 
@@ -181,6 +218,7 @@ border: none;
   display: flex;
   align-items: center;
   margin-left: 90px;
+ 
 }
 
 .people_numbers{
@@ -199,4 +237,153 @@ border: none;
   color: #D1D1D1;
   line-height: 28px;
   font-size: 16px;
+  margin-right: 74px;
+}
+
+.vr-content{
+  position: relative;
+}
+.vr-image{
+  background-color: #21232E;
+ padding: 20px 30px;
+ position: relative;
+ cursor: pointer;
+ 
+}
+
+.play{
+  position: absolute;
+  left: 42%;
+  top:41%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.play:hover{
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.hero_image{
+  position: relative;
+}
+
+.play{
+  transition: transform 0.3s ease;
+}
+.play:hover{
+  transform: scale(1.1);
+}
+
+.hidden_image_text{
+ overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(to right, blue, pink);
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  height: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.hidden_image_text.active{
+  max-height: 200px;
+  opacity: 1;
+  z-index: 10;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* advantages */
+
+.advantages{
+  margin-left: 352px;
+  margin-right: 352px;
+  display: flex;
+  width: 1200px;
+  height: 367px;
+  background-color: #252532;
+  position: relative;
+  bottom: 5px;
+  padding-top: 42px;
+  padding-left: 64px;
+  border: 1px  #808080 solid;
+
+  margin-bottom: 120px;
+}
+
+.expension_body{
+  width: 325px;
+  height: 262px;
+margin-right: 50px;
+}
+.Expertise{
+  margin-bottom: 42px;
+}
+.Expertise-title{
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.Expertise-content{
+  color: #B0B0B2;
+  font-size: 14px;
+  font-weight: 400;
+  width: 324px;
+  line-height: 28px;
+}
+
+.Customization_body{
+  padding-left: 50px;
+  width: 325px;
+  height: 262px;
+margin-right: 50px;
+}
+.Customization{
+  margin-bottom: 42px;
+}
+.Customization-title{
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.Customization-content{
+  color: #B0B0B2;
+  font-size: 14px;
+  font-weight: 400;
+  width: 324px;
+line-height: 28px;
+}
+
+
+.service_body{
+  padding-left: 50px;
+  width: 325px;
+  height: 262px;
+
+}
+.service{
+  margin-bottom: 42px;
+}
+.service-title{
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.service-content{
+  color: #B0B0B2;
+  font-size: 14px;
+  font-weight: 400;
+  width: 324px;
+   line-height: 28px;
 }
